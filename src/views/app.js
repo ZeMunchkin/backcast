@@ -15,6 +15,20 @@ var AppView = Backbone.View.extend({
       collection: this.videos,
     });
     
+    this.searchView = new SearchView({
+      //define the el
+      el: this.$('.search'),
+      //pass in the collection
+      collection: this.videos,
+    });
+    
+    //create video list view
+    this.videoList = new VideoListView({
+      //define the el
+      el: this.$('.list'),
+      //pass in collection
+      collection: this.videos,
+    });
       
     
   },
