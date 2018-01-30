@@ -10,7 +10,7 @@ var SearchView = Backbone.View.extend({
 
   events: {
     'click button': 'searchHandler',
-    'keypress': 'updateOnEnter'
+    'keyup input': 'updateOnEnter'
   },
   
   updateOnEnter: function (e) {

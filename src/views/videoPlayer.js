@@ -1,6 +1,7 @@
 var VideoPlayerView = Backbone.View.extend({
   
   initialize: function () {
+    
     // set selected model property to be first model in collection
     this.selectedModel = this.collection.at(0);
 
@@ -14,6 +15,12 @@ var VideoPlayerView = Backbone.View.extend({
       // append to the appropriate app node
       this.$el.append(this.render());
     }, this);  
+    
+    // re-render when collection is reset
+    this.collection.on('reset', function () {
+      this.selectedModel = this.collection.at(0);
+      this.render();
+    }, this);
   },
 
   template: templateURL('src/templates/videoPlayer.html'),
