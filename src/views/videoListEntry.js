@@ -13,6 +13,7 @@ var VideoListEntryView = Backbone.View.extend({
   handleClick: function() {
     // call select on the model
     this.model.select();
+    
   },
 
   template: templateURL('src/templates/videoListEntry.html')

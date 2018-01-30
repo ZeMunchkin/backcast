@@ -7,7 +7,6 @@ describe('VideoListView', function() {
 
     collection = new Videos(fakeVideoData);
     view = new VideoListView({ collection: collection });
-    console.log('This is the collection: ', collection, 'this is the view: ', view);
   });
 
   afterEach(function() {
