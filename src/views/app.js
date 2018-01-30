@@ -13,14 +13,14 @@ var AppView = Backbone.View.extend({
       el: this.$('.player'),
       //pass in the collection
       collection: this.videos,
-    });
+    }).render();
     
     this.searchView = new SearchView({
       //define the el
       el: this.$('.search'),
       //pass in the collection
       collection: this.videos,
-    });
+    }).render();
     
     //create video list view
     this.videoList = new VideoListView({
@@ -28,7 +28,7 @@ var AppView = Backbone.View.extend({
       el: this.$('.list'),
       //pass in collection
       collection: this.videos,
-    });
+    }).render();
       
     
   },

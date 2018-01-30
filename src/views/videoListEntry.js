@@ -1,10 +1,5 @@
 var VideoListEntryView = Backbone.View.extend({
   
-  //write initialize
-  initialize: function() {
-    //call render
-    this.render();
-  },
   
   template: templateURL('src/templates/videoListEntry.html'),
 
