@@ -3,9 +3,20 @@ var AppView = Backbone.View.extend({
   el: '#app',
 
   initialize: function() {
-    this.videos = new Videos();
+    this.videos = new Videos(window.exampleVideoData);
+    
     //append the rendered content to the body
     this.render();
+    //instantiate new video player view
+    this.playerView = new VideoPlayerView({
+      //define the el for the player
+      el: this.$('.player'),
+      //pass in the collection
+      collection: this.videos,
+    });
+    
+      
+    
   },
   
   //create template function using given template
