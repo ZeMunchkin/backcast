@@ -5,6 +5,8 @@ var AppView = Backbone.View.extend({
   initialize: function() {
     this.videos = new Videos(window.exampleVideoData);
     
+    //cr
+    
     //append the rendered content to the body
     this.render();
     //instantiate new video player view
