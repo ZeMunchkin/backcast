@@ -7,6 +7,7 @@ var AppView = Backbone.View.extend({
     //append the rendered content to the body
     $('body').append(this.render());
     
+    
   },
   
   //create template function using given template
