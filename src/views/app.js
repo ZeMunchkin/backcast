@@ -4,10 +4,12 @@ var AppView = Backbone.View.extend({
 
   initialize: function() {
     this.videos = new Videos();
+    //append the rendered content to the body
     $('body').append(this.render());
     
   },
   
+  //create template function using given template
   template: _.template(`<div id="container">
   <nav class="navbar">
     <div class="col-md-6 col-md-offset-3">
@@ -27,6 +29,7 @@ var AppView = Backbone.View.extend({
 
   render: function() {
     this.$el.html(this.template());
+    //return the node itself
     return this.$el;
   },
 
