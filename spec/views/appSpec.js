@@ -21,7 +21,6 @@ describe('AppView', function() {
   });
 
   it('should render itself', function() {
-    console.log("THIS VIEW: ", view);
     expect(AppView.prototype.render).to.have.callCount(1);
   });
 
