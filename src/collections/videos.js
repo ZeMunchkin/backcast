@@ -10,7 +10,7 @@ var Videos = Backbone.Collection.extend({
   search: function(query) {
     var context = this;
     
-    Backbone.ajax({
+    this.fetch({
       url: 'https://www.googleapis.com/youtube/v3/search',
       type: 'GET',
       data: {
@@ -24,9 +24,9 @@ var Videos = Backbone.Collection.extend({
       },
       // contentType: ,
       success: function(data) {
-        console.log(data);
         // run data through parse and reset the collection
-        context.reset(context.parse(data));
+        console.log('success', data);
+        // context.reset(context.parse(data));
       },
       error: function(data) {
         console.log('FAILED', data);

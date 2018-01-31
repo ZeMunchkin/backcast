@@ -5,7 +5,7 @@ var AppView = Backbone.View.extend({
   initialize: function() {
     this.videos = new Videos(window.exampleVideoData);
     
-    //cr
+    this.videos.search('dog');
     
     //append the rendered content to the body
     this.render();

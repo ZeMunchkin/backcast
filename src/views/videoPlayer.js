@@ -17,19 +17,18 @@ var VideoPlayerView = Backbone.View.extend({
     }, this);  
     
     // re-render when collection is reset
-    this.collection.on('reset', function () {
-      this.selectedModel = this.collection.at(0);
-      this.render();
+    this.collection.on('sync', function () {
+      this.collection.at(0).select();
     }, this);
   },
 
   template: templateURL('src/templates/videoPlayer.html'),
 
   render: function() {
+    // debugger;
     //specifically use the selected model property and run through template
     this.$el.html(this.template(this.selectedModel.attributes));
     //return the updated $el
-    console.log('selected model: ', this.selectedModel);
     return this.$el;
   }
 
